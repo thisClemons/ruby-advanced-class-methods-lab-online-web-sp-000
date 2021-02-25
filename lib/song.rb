@@ -33,7 +33,7 @@ class Song
   def self.find_by_name(name)
     if song_index = self.all.find_index {|song| song.name == name}
       @@all[song_index]
-    else nil 
+    else 
     end
   end
 
@@ -49,6 +49,6 @@ class Song
     self.all.sort
   end
 
-  binding.pry
+  #binding.pry
 
 end
