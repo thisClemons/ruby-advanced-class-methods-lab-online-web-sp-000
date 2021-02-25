@@ -49,6 +49,13 @@ class Song
     self.all.sort {|a, b| a.name <=> b.name}
   end
 
+  def self.new_from_filename(filename)
+    parsed = filename.split(/ - |.mp3/)
+    song = self.new_by_name(parsed[1])
+    song.artist = parsed[0]    
+    
+  end
+
   #binding.pry
 
 end
