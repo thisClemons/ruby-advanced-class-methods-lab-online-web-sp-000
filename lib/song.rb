@@ -53,7 +53,7 @@ class Song
     parsed = filename.split(/ - |.mp3/)
     song = self.new_by_name(parsed[1])
     song.artist = parsed[0]    
-    
+
   end
 
   #binding.pry
