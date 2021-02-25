@@ -32,7 +32,7 @@ class Song
 
   def self.find_by_name(name)
     if song_index = self.all.find_index {|song| song.name == name}
-      @@all[song_index]
+      self.all[song_index]
     end
   end
 
@@ -60,6 +60,10 @@ class Song
   def self.create_from_filename(filename)
     song = self.new_from_filename(filename)
     song.save
+  end
+
+  def self.destroy_all
+    self.all.clear     
   end
 
   #binding.pry
