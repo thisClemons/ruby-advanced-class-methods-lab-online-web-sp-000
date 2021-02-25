@@ -49,6 +49,6 @@ class Song
     self.all.sort
   end
 
-  #binding.pry
+  binding.pry
 
 end
