@@ -29,11 +29,12 @@ class Song
   end
 
   def self.find_by_name(name)
-    song_index = self.all.find_index {|song| song.name == name}
-    @@all[song_index]
+    if song_index = self.all.find_index {|song| song.name == name}
+      @@all[song_index]
+    else false
   end
 
-  def method_name
+  def find_or_create_by_name(name)
 
   end
 
