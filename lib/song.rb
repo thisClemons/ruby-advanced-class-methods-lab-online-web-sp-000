@@ -32,6 +32,7 @@ class Song
     if song_index = self.all.find_index {|song| song.name == name}
       @@all[song_index]
     else false
+    end
   end
 
   def find_or_create_by_name(name)
